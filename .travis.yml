@@ -7,6 +7,4 @@ before_install:
   - docker build -t aleksandargujas/dockertoy -f Dockerfile.dev .
 
 script:
-  - d- docker run -e CI=true aleksandargujas/dockertoy npm run test 
-
-  # -- --coverage
+  - docker run -e CI=true aleksandargujas/dockertoy npm run test
